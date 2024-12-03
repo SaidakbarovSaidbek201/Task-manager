@@ -3,9 +3,9 @@ from django.db import models
 
 class Book(models.Model):
     name = models.CharField(max_length = 256)
-    name = models.CharField(max_length = 256)
     year = models.DateField(auto_now_add = True)
     pages = models.IntegerField()
+    mualif = models.CharField(max_length=255, default='Unknown Author')
     janri = models.CharField(max_length= 256)
     image = models.ImageField(upload_to="photos/")
     info = models.TextField()

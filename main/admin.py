@@ -3,6 +3,14 @@ from .models import Book
 from .models import Vazifa
 
 
-# Register your models here.
-admin.site.register(Book)
 admin.site.register(Vazifa)
+
+
+class CustomKitob(admin.ModelAdmin):
+    list_display = ('name', 'mualif', 'year', 'janri')
+    list_filter = ('year', 'janri')
+    search_fields = ('name', 'mualif', 'janri')
+    date_hierarchy = 'year'
+
+admin.site.register(Book, CustomKitob)
+
