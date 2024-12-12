@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Book
+from .models import Books
 from .models import Vazifa
 
 
@@ -12,5 +12,5 @@ class CustomKitob(admin.ModelAdmin):
     search_fields = ('name', 'mualif', 'janri')
     date_hierarchy = 'year'
 
-admin.site.register(Book, CustomKitob)
+admin.site.register(Books, CustomKitob)
 

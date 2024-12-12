@@ -1,7 +1,7 @@
 from django.db import models
 
 
-class Book(models.Model):
+class Books(models.Model):
     name = models.CharField(max_length = 256)
     year = models.DateField(auto_now_add = True)
     pages = models.IntegerField()
